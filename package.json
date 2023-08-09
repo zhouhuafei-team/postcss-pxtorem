@@ -1,14 +1,14 @@
 {
-  "name": "postcss-pxtorem",
-  "description": "A CSS post-processor that converts px to rem.",
-  "version": "6.0.0",
-  "author": "cuth",
+  "name": "postcss-pxtoupx",
+  "description": "A CSS post-processor that converts px to upx.",
+  "version": "1.0.0",
+  "author": "zhouhuafei",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:cuth/postcss-pxtorem.git"
+    "url": "git@github.com:zhouhuafei-team/postcss-pxtorem.git"
   },
-  "bugs": "https://github.com/cuth/postcss-pxtorem/issues",
+  "bugs": "https://github.com/zhouhuafei-team/postcss-pxtorem/issues",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",

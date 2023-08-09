@@ -1,3 +1,29 @@
+# 基于postcss-pxtorem改造
+* 使用 uni-cli 进行微信小程序开发时想直接使用px进行书写。
+* 所以就打算使用插件把px转换成upx。 
+* 之后uni-cli会自动再把upx转换成rpx。
+```typescript
+import { defineConfig } from 'vite'
+import uni from '@dcloudio/vite-plugin-uni'
+import pxtoupx from 'postcss-pxtoupx'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  css: {
+    postcss: {
+      plugins: [
+        pxtoupx({
+          rootValue: 0.5, // 375设计图时此处填写0.5 - 750设计图时此处填写1
+          unitPrecision: 5, // 转换后的数值精确到小数点后5位
+          minPixelValue: 2 // 不小于2px时才进行upx转换
+        })
+      ]
+    }
+  },
+  plugins: [uni()]
+})
+```
+
 # postcss-pxtorem [![NPM version](https://badge.fury.io/js/postcss-pxtorem.svg)](http://badge.fury.io/js/postcss-pxtorem)
 
 A plugin for [PostCSS](https://github.com/ai/postcss) that generates rem units from pixel units.
