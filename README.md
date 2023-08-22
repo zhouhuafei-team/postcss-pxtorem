@@ -13,6 +13,7 @@ export default defineConfig({
     postcss: {
       plugins: [
         pxtoupx({
+          propList: ['*'],
           rootValue: 0.5, // 375设计图时此处填写0.5 - 750设计图时此处填写1
           unitPrecision: 5, // 转换后的数值精确到小数点后5位
           minPixelValue: 2 // 不小于2px时才进行upx转换

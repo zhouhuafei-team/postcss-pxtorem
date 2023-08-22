@@ -1,7 +1,7 @@
 {
   "name": "postcss-pxtoupx",
   "description": "A CSS post-processor that converts px to upx.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "zhouhuafei",
   "license": "MIT",
   "repository": {
